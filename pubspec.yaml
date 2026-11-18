@@ -1,0 +1,33 @@
+name: dexi_movil
+description: "Dexi: gestión de clínicas dentales (app móvil)."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  flutter_secure_storage: ^11.2.0
+  http: ^1.6.0
+  image_picker: ^1.2.4
+  intl: ^0.20.2
+  mobile_scanner: ^7.5.0
+  provider: ^6.1.5+1
+  url_launcher: ^6.3.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Logo de Dexi (completo) y el diente solo (generados con recursos/scripts/generar-iconos.php).
+  assets:
+    - assets/images/logo.webp
+    - assets/images/logo_mark.png

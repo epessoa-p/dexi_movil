@@ -1,0 +1,86 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Dexi móvil (Flutter). Además de este archivo, android/.gitignore e
+# ios/.gitignore cubren lo propio de cada plataforma (keystores, Pods, etc.).
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# IntelliJ / Android Studio
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code: se comparten solo la configuración de depuración, ajustes y extensiones recomendadas.
+.vscode/*
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+*.lcov
+
+# FVM (versión de Flutter por proyecto): se versiona .fvmrc, no el SDK descargado
+.fvm/flutter_sdk
+.fvm/versions
+
+# Symbolication / obfuscation (se generan al compilar con --split-debug-info / --obfuscate)
+app.*.symbols
+app.*.map.json
+/debug-info/
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# ── Secretos y configuración local ──────────────────────────────────────────
+# URL de la API, llaves, etc. Se pasan con --dart-define-from-file=env/<entorno>.json.
+# Se versiona solo el ejemplo (sin valores reales).
+.env
+.env.*
+!.env.example
+/env/*.json
+!/env/*.example.json
+
+# Firma de la app (también cubiertos en android/.gitignore): nunca al repositorio
+*.jks
+*.keystore
+key.properties
+*.p12
+*.p8
+*.mobileprovision
+*.cer
+
+# Firebase (si se usa): logs locales. google-services.json y GoogleService-Info.plist
+# no son secretos, pero si se prefiere no publicarlos, descomentar:
+firebase-debug.log
+firebase-debug.*.log
+# android/app/google-services.json
+# ios/Runner/GoogleService-Info.plist
